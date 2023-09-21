@@ -1,0 +1,34 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+     <changeSet id="4" author="prasanna">
+         <createTable tableName="marks">
+             <column name="mark_id" type="int" autoIncrement="1" startWith="1">
+                 <constraints primaryKey="true"/>
+
+             </column>
+             <column name="student_id" type="int" />
+             <column name="semester_id" type="int"/>
+             <column name="subject_id" type="int"/>
+             <column name="exam_type" type="varchar"/>
+             <column name="marks_obtained" type="float"/>
+
+
+         </createTable>
+
+     </changeSet>
+
+    <changeSet id="4.1" author="prasanna">
+        <addForeignKeyConstraint baseTableName="marks" baseColumnNames="semester_id" constraintName="marks_semfk"
+                                 referencedTableName="semesters"
+                                 referencedColumnNames="semester_id"/>
+        <addForeignKeyConstraint baseTableName="marks" baseColumnNames="student_id" constraintName="marks_stufk"
+                                 referencedTableName="students"
+                                 referencedColumnNames="student_id"/>
+        <addForeignKeyConstraint baseTableName="marks" baseColumnNames="subject_id" constraintName="marks_subfk"
+                                 referencedTableName="subjects"
+                                 referencedColumnNames="subject_id"/>
+    </changeSet>
+</databaseChangeLog>

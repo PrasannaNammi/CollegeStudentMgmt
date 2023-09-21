@@ -1,0 +1,24 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+<changeSet id="3" author="prasanna">
+    <createTable tableName="faculty">
+        <column name="faculty_id" type="int" autoIncrement="1" startWith="1">
+            <constraints primaryKey="true" />
+
+        </column>
+        <column name="name" type="varchar(20)"/>
+        <column name="contact_info" type="varchar(30)"/>
+        <column name="department_id" type="int"/>
+        <column name="created_at" type="date"/>
+        <column name="updated_at" type="date"/>
+        <column name="is_active" type="varchar(5)"/>
+
+    </createTable>
+
+    <addForeignKeyConstraint baseTableName="faculty" baseColumnNames="department_id" constraintName="faculty_fk" referencedTableName="departments"
+                             referencedColumnNames="department_id"/>
+</changeSet>
+</databaseChangeLog>

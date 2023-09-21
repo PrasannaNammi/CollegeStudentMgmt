@@ -1,0 +1,17 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="8" author="prasanna">
+        <createTable tableName="roles">
+            <column name="role_id" type="int" autoIncrement="1" startWith="1">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="role" type="varchar(30)"/>
+        </createTable>
+    </changeSet>
+
+
+
+</databaseChangeLog>

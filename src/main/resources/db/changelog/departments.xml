@@ -1,0 +1,25 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+
+    <changeSet id="5" author="prasanna">
+        <createTable tableName="departments">
+            <column name="department_id" type="int" startWith="1" autoIncrement="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(30)"/>
+            <column name="fee" type="float"/>
+            <column name="hod" type="int"/>
+        </createTable>
+
+    </changeSet>
+
+    <changeSet id="5.1" author="prasanna">
+        <addForeignKeyConstraint baseTableName="departments" baseColumnNames="hod" constraintName="dep_fk"
+                                 referencedTableName="faculty"
+                                 referencedColumnNames="faculty_id"/>
+    </changeSet>
+
+</databaseChangeLog>

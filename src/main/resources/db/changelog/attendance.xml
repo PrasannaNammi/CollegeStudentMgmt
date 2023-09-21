@@ -1,0 +1,32 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+
+    <changeSet id="6" author="prasanna">
+        <createTable tableName="attendance">
+            <column name="attendance_id" type="int" autoIncrement="1" startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="student_id" type="int"/>
+            <column name="semester_id" type="int"/>
+            <column name="subject_id" type="int"/>
+            <column name="total_classes" type="int"/>
+            <column name="attended_classes" type="int"/>
+        </createTable>
+
+    </changeSet>
+<changeSet id="6.1" author="prasanna">
+    <addForeignKeyConstraint baseTableName="attendance" baseColumnNames="semester_id" constraintName="attendance_semfk"
+                             referencedTableName="semesters"
+                             referencedColumnNames="semester_id"/>
+    <addForeignKeyConstraint baseTableName="attendance" baseColumnNames="student_id" constraintName="attendance_stufk"
+                             referencedTableName="students"
+                             referencedColumnNames="student_id"/>
+    <addForeignKeyConstraint baseTableName="attendance" baseColumnNames="subject_id" constraintName="attendance_subfk"
+                             referencedTableName="subjects"
+                             referencedColumnNames="subject_id"/>
+</changeSet>
+
+</databaseChangeLog>
