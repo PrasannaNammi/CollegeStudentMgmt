@@ -1,7 +1,7 @@
 package collegemanagement.controllers;
 
-import collegemanagement.requestDto.ApiResponse;
 import collegemanagement.requestDto.AttendanceDto;
+import collegemanagement.responseDto.ApiResponse;
 import collegemanagement.service.AttendanceService;
 import collegemanagement.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;

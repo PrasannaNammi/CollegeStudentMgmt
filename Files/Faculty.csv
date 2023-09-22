@@ -1,0 +1,31 @@
+Faculty_id,Name,Contact_info,Department_Id,Created_at,Updated_at,Is_active
+41,Dr. Vikram Sharma,bhavanimolleti2001@gmail.com,301,20-05-2002,,Yes
+42,Prof. Meera Patel,mongamjyothikapriya2000@gmail.com,301,14-08-2001,,Yes
+43,Dr. Rajesh Gupta,kaushikr0077@gmail.com,301,03-10-2003,,Yes
+44,Prof. Deepa Singhania,avinash.nimmakayala980@gmail.com,301,11-02-2002,,Yes
+45,Dr. Anjali Desai,reetikap55@gmail.com ,301,30-12-2004,,Yes
+46,Prof. Sunil Khanna,reethupedapudi3010@gmail.com,302,22-04-2003,,Yes
+47,Dr. Sneha Joshi,chanakya.peela@gmail.com,302,17-06-2001,,Yes
+48,Prof. Rajan Verma,polavarapusatish123@gmail.com,302,05-01-2005,,Yes
+49,Dr. Nandini Reddy,rohitpukkella2000@gmail.com,302,27-08-2004,,Yes
+50,Prof. Alok Kumar,saragadamsupriya999@gmail.com,302,19-11-2002,,Yes
+51,Dr. Priya Sharma,bhagavansatyavarapu@gmail.com,303,28-02-2005,,Yes
+52,Prof. Sanjay Singh,sriharisiripurapu167@gmail.com,303,08-09-2003,,Yes
+53,Dr. Anita Kapoor,suradaanil20@gmail.com,303,10-03-2004,,Yes
+54,Prof. Ramesh Kumar,chandramouli.0401@gmail.com,303,25-12-2001,,Yes
+55,Dr. Preeti Choudhury,tkirankumar2001@gmail.com,303,15-05-2003,,Yes
+56,Prof. Neha Gupta,niroopsaiv2001@gmail.com,304,07-07-2002,,Yes
+57,Dr. Arvind Patel,vasamsettiyaswanthnaveen@gmail.com,304,12-10-2004,,Yes
+58,Prof. Shweta Das,jagadishkumar22582@gmail.com ,304,28-03-2001,,Yes
+59,Dr. Manoj Tiwari,santangontina018@gmail.com,304,06-03-2005,,Yes
+60,Prof. Sunita Bansal,edurupakalasrinivas73@gmail.com,304,02-09-2002,,Yes
+61,Dr. Anil Joshi,kiranpeddada203@gmail.com,305,23-07-2004,,Yes
+62,Prof. Rekha Sharma,vijayamoka2001@gmail.com,305,14-01-2003,,Yes
+63,Dr. Rahul Singhania,devadasueee15009@gmail.com,305,09-04-2001,,Yes
+64,Prof. Geeta Gupta,devadasueee15009@gmail.com,305,10-12-2002,,Yes
+65,Dr. Deepak Sharma,khksureshvsp@gmail.com,305,04-06-2004,,Yes
+66,Prof. Neha Verma,sharmilalalam115@gmail.com,301,31-10-2001,,Yes
+67,Dr. Kavita Deshmukh,potnuruajaykumar2529@gmail.com,302,01-07-2003,,Yes
+68,Prof. Manish Kapoor,abhideviabhidevi76081@gmail.com,303,25-03-2002,,Yes
+69,Dr. Meenal Shah,ponnadapoornima2001@gmail.com,304,10-03-2005,,Yes
+70,Prof. Ashok Rastogi,bhavanarachel2428@gmail.com,305,16-02-2004,,Yes

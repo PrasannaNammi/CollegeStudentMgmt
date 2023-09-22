@@ -1,7 +1,7 @@
 package collegemanagement.controllers;
 
-import collegemanagement.requestDto.ApiResponse;
 import collegemanagement.requestDto.StudentDto;
+import collegemanagement.responseDto.ApiResponse;
 import collegemanagement.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ public class StudentController {
     private StudentService studentService;
 
     @GetMapping("/fee")
-    public ResponseEntity<ApiResponse<Double>> total_fee(@RequestParam int studentId,@RequestParam int semesterId){
+    public ResponseEntity<ApiResponse<Double>> total_fee(@RequestParam int studentId, @RequestParam int semesterId){
         return new ResponseEntity<>(new ApiResponse<>(studentService.fee(studentId,semesterId)),HttpStatus.OK);
     }
 

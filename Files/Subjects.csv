@@ -1,0 +1,49 @@
+Subject_id,Name,Faculty_ID,Semester_id
+111,Data Structures,41,1
+112,Programming Fundamentals,42,1
+113,Digital Logic,43,1
+114,Discrete Mathematics,44,1
+115,English Communication Skills,45,1
+116,Programming Lab,66,1
+117,Algorithms and Complexity,41,2
+118,Object-Oriented Programming,42,2
+119,Computer Organization and Architecture,43,2
+120,Probability and Statistics,44,2
+121,Environmental Studies,45,2
+122,Data Structures Lab,66,2
+123,Database Management Systems,41,3
+124,Operating Systems,42,3
+125,Computer Networks,43,3
+126,Software Engineering,44,3
+127,Technical Writing and Presentation,45,3
+128,Database Lab,66,3
+129,Web Development,41,4
+130,Artificial Intelligence,42,4
+131,Software Testing and Quality Assurance,43,4
+132,Theory of Computation,44,4
+133,Ethics in Computing ,45,4
+134,Web Development Lab,66,4
+135,Cybersecurity,41,5
+136,Distributed Systems,42,5
+137,Machine Learning,43,5
+138,Cloud Computing,44,5
+139,Human-Computer Interaction,45,5
+140, Cybersecurity Lab,66,5
+141,Mobile App Development,41,6
+142,Big Data Analytics,42,6
+143,Compiler Design,43,6
+144,Natural Language Processing,44,6
+145,Project Management,45,6
+146, Mobile App Development Lab,66,6
+147,Internet of Things (IoT),41,7
+148,Computer Graphics,42,7
+149,Blockchain Technology,43,7
+150,Data Mining and Warehousing,44,7
+151,Entrepreneurship and Innovation,45,7
+152, IoT Lab,66,7
+153,Robotics and Automation,41,8
+154,Advanced Topics in CSE,42,8
+155,Seminar on Current Trends,43,8
+156,Final Year Project,44,8
+157,Professional Ethics,45,8
+158, Robotics Lab,66,8

@@ -1,7 +1,7 @@
 package collegemanagement.controllers;
 
-import collegemanagement.requestDto.ApiResponse;
 import collegemanagement.requestDto.MarksDto;
+import collegemanagement.responseDto.ApiResponse;
 import collegemanagement.service.MarksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

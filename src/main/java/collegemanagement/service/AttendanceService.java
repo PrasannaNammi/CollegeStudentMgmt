@@ -101,6 +101,7 @@ public class AttendanceService {
         return true;
     }
 
+    // attendance  percentage for that particular subject
     public Double attendancebyAll(int studentId, int semesterId, int subjectId){
 
         Optional<Double> value =  attendanceRepo.attBydetails( studentId, semesterId,  subjectId);
@@ -111,6 +112,7 @@ public class AttendanceService {
 
     }
 
+    //attendance percentage for semester
     public Double semAttendance(int studentId, int semesterId){
 
         Optional<Double> value =  attendanceRepo.semAttendance(studentId,semesterId);
