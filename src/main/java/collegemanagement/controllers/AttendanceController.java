@@ -1,9 +1,7 @@
 package collegemanagement.controllers;
 
-import collegemanagement.ApiResponse;
-import collegemanagement.customexceptions.NoSuchCombinationException;
-import collegemanagement.dto.AttendanceDto;
-import collegemanagement.entities.Attendance;
+import collegemanagement.requestDto.ApiResponse;
+import collegemanagement.requestDto.AttendanceDto;
 import collegemanagement.service.AttendanceService;
 import collegemanagement.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @RestController
 

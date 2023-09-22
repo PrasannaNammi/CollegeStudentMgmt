@@ -1,11 +1,8 @@
 package collegemanagement.controllers;
 
-import collegemanagement.ApiResponse;
-import collegemanagement.dto.AttendanceDto;
-import collegemanagement.dto.StudentDto;
-import collegemanagement.entities.Student;
+import collegemanagement.requestDto.ApiResponse;
+import collegemanagement.requestDto.StudentDto;
 import collegemanagement.service.StudentService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,9 +1,6 @@
 package collegemanagement.service;
 
-import collegemanagement.customexceptions.IdNotFoundException;
-import collegemanagement.dto.AttendanceDto;
-import collegemanagement.dto.StudentDto;
-import collegemanagement.entities.Attendance;
+import collegemanagement.requestDto.StudentDto;
 import collegemanagement.entities.Student;
 import collegemanagement.repository.DepartmentRepo;
 import collegemanagement.repository.SemesterRepo;

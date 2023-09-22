@@ -1,4 +1,4 @@
-package collegemanagement.dto;
+package collegemanagement.requestDto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

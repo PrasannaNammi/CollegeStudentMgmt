@@ -3,6 +3,7 @@ package collegemanagement.global_exception;
 
 import collegemanagement.customexceptions.IdNotFoundException;
 import collegemanagement.customexceptions.NoSuchCombinationException;
+import collegemanagement.responseDto.ErrorResponse;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

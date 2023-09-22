@@ -1,9 +1,5 @@
-package collegemanagement;
+package collegemanagement.requestDto;
 
-
-
-//import com.main.RequestDto.PatientDto;
-//import liquibase.pro.packaged.C;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

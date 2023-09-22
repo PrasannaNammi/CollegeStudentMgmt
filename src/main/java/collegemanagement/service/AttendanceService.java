@@ -2,7 +2,7 @@ package collegemanagement.service;
 
 import collegemanagement.customexceptions.IdNotFoundException;
 import collegemanagement.customexceptions.NoSuchCombinationException;
-import collegemanagement.dto.AttendanceDto;
+import collegemanagement.requestDto.AttendanceDto;
 import collegemanagement.entities.Attendance;
 import collegemanagement.entities.Student;
 import collegemanagement.repository.AttendanceRepo;
@@ -11,7 +11,6 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
