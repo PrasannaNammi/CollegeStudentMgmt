@@ -17,12 +17,12 @@ public class SubjectController {
     @Autowired
     private SubjectService subjectService;
 
-    @GetMapping("BySemester")
+    @GetMapping("/BySemester")
     public ResponseEntity<ApiResponse<List<SubjectDto>>> subjects(@RequestParam() int semesterId){
         return new ResponseEntity<>(new ApiResponse<>(subjectService.subsBySem(semesterId)), HttpStatus.OK);
     }
 
-    @PutMapping("updateSemfee")
+    @PutMapping("/updateSemfee")
     public ResponseEntity<ApiResponse<SubjectDto>> updateName(@RequestParam int id, @RequestParam String name){
         return new ResponseEntity<>(new ApiResponse<>(subjectService.update(id,name)),HttpStatus.OK);
     }

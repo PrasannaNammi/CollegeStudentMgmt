@@ -18,27 +18,27 @@ public class MarksController {
     @Autowired
     private MarksService marksService;
 
-    @GetMapping("ByStudent")
+    @GetMapping("/ByStudent")
     public ResponseEntity<ApiResponse<List<MarksDto>>> getByStudent(@RequestParam() int id) {
         return new ResponseEntity<>(new ApiResponse<>(marksService.getMarksByStudent(id)), HttpStatus.OK);
     }
 
-    @GetMapping("BySemester")
+    @GetMapping("/BySemester")
     public ResponseEntity<ApiResponse<List<MarksDto>>> marksheet(@RequestParam() int studentId, @RequestParam() int semesterId) {
         return new ResponseEntity<>(new ApiResponse<>(marksService.marksheet(studentId, semesterId)), HttpStatus.OK);
     }
 
-    @GetMapping("GPA/grade")
+    @GetMapping("/GPA/grade")
     public ResponseEntity<ApiResponse<String>> grade(@RequestParam() int studentId, @RequestParam() int semesterId) {
         return new ResponseEntity<>(new ApiResponse<>(marksService.grade(studentId, semesterId)), HttpStatus.OK);
     }
 
-    @PostMapping("add")
+    @PostMapping("/add")
     public ResponseEntity<ApiResponse<MarksDto>> addMarks(@RequestBody MarksDto marksDto) {
         return new ResponseEntity<>(new ApiResponse<>(marksService.addMarks(marksDto)), HttpStatus.OK);
     }
 
-    @DeleteMapping("delete")
+    @DeleteMapping("/delete")
     public ResponseEntity<ApiResponse<String>> deleteMarks(@RequestParam int id) {
         if (marksService.delete(id))
             return new ResponseEntity<>(new ApiResponse<>("Deleted successfully"), HttpStatus.OK);

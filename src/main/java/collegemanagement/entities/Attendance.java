@@ -11,17 +11,17 @@ public class Attendance {
     @Column
     private int  attendanceId;
 
-    @ManyToOne
+    @ManyToOne(fetch =  FetchType.LAZY)
     @JsonIgnore
     @JoinColumn(name = "studentId", referencedColumnName = "studentId",insertable = false, updatable = false)
     private Student student;
 
-    @ManyToOne
+    @ManyToOne(fetch =  FetchType.LAZY)
     @JsonIgnore
     @JoinColumn(name="semesterId", referencedColumnName = "semesterId",insertable = false, updatable = false)
     private  Semester semester;
 
-    @ManyToOne
+    @ManyToOne(fetch =  FetchType.LAZY)
     @JsonIgnore
     @JoinColumn(name="subjectId", referencedColumnName = "subjectId",insertable = false, updatable = false)
     private  Subjects subject;
@@ -36,9 +36,9 @@ public class Attendance {
         return attendanceId;
     }
 
-    public void setAttendanceId(int attendanceId) {
-        this.attendanceId = attendanceId;
-    }
+//    public void setAttendanceId(int attendanceId) {
+//        this.attendanceId = attendanceId;
+//    }
 
     public Student getStudent() {
         return student;

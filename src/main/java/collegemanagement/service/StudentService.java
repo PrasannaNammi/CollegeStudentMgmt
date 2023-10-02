@@ -51,7 +51,7 @@ public class StudentService {
         throw new NoSuchElementException();
 
     }
-
+//condonation fee
 
     public double fee(int studentId, int semesterId){
         Optional<Student> s = studentRepo.findById(studentId);
@@ -61,7 +61,7 @@ public class StudentService {
 
            double total = departmentRepo.findById(dept).get().getFee();
            total+= semesterRepo.findById(semesterId).get().getSemFee();
-           double percentage = attendanceService.semAttendance(studentId,semesterId);
+           double percentage = attendanceService.calculateSemesterAttendancePercentage(studentId,semesterId);
            if(percentage>=80)
                return total;
            else if(percentage>=75)

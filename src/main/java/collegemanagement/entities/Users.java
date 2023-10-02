@@ -7,16 +7,25 @@ import jakarta.persistence.*;
 public class Users
 {
     @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column
-private int  UserId;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private int  UserId;
     private String username;
     private String password;
+    private String roles;
 
-    @OneToOne
-    @JoinColumn(name = "roleId", referencedColumnName = "roleId")
-    private Role role;
+    public String getRoles() {
+        return roles;
+    }
+
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+//    @OneToOne
+//    @JoinColumn(name = "roleId", referencedColumnName = "roleId")
+//    private Role role;
+
 
     public int getUserId() {
         return UserId;
@@ -42,11 +51,11 @@ private int  UserId;
         this.password = password;
     }
 
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
+//    public Role getRole() {
+//        return role;
+//    }
+//
+//    public void setRole(Role role) {
+//        this.role = role;
+//    }
 }

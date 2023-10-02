@@ -33,7 +33,7 @@ public class StudentController {
         return new ResponseEntity<>(new ApiResponse<>(studentService.getAllStudents()),HttpStatus.OK);
     }
 
-    @PostMapping("newStudent")
+    @PostMapping("/newStudent")
     public ResponseEntity<ApiResponse<StudentDto>> createStudent(@RequestBody StudentDto studentDto){
         return new ResponseEntity<>(new ApiResponse<>(studentService.addStudent(studentDto)),HttpStatus.OK);
     }
