@@ -8,9 +8,10 @@ import lombok.NoArgsConstructor;
 public class UserDto {
 
     private int  UserId;
-    private int  roleId;
+//    private int  roleId;
     private String username;
     private String password;
+    private String roles;
 
 
 }

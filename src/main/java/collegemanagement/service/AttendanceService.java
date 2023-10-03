@@ -128,26 +128,25 @@ public class AttendanceService {
 
 
 //     Calculate the semester attendance percentage
-//    public Double calculateSemesterAttendancePercentage(int studentId, int semesterId) {
-//
-//        List<Attendance> attendanceOptional = attendanceRepo.semesterwise(studentId, semesterId);
-//
-//        if (attendanceOptional.isPresent()) {
-//            Attendance attendance = attendanceOptional.get();
-//            int attendedClasses = attendance.getAttendedClasses();
-//            int totalClasses = attendance.getTotalClasses();
-//
-//            if (totalClasses > 0) {
-//                return (double) (attendedClasses * 100) / totalClasses;
-//            } else {
-//                throw new BussinessException("Invalid Attendance Request... ");
-//            }
-//        } else {
-//
-//            throw new NoSuchElementException("Invalid... Incorrect Details");
-//        }
+public Double calculateSemesterAttendancePercentage(int studentId, int semesterId) {
+
+    Student student = studentRepo.findById(studentId)
+            .orElseThrow(() -> new IdNotFoundException("No Student found with the given id!"));
+    List<Attendance> attendanceList = attendanceRepo.semesterwise(studentId, semesterId);
+
+    int attendedClasses =0, totalClasses =0;
+    for( var attendance: attendanceList){
+        attendedClasses += attendance.getAttendedClasses();
+        totalClasses += attendance.getTotalClasses();
+    }
+    if (totalClasses > 0) {
+        return (double) (attendedClasses * 100) / totalClasses;
+    } else {
+        throw new BussinessException("Invalid Attendance Request... ");
+    }
 
 
+}
     }
 
 

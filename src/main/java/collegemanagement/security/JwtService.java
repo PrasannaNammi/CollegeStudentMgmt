@@ -63,7 +63,9 @@ public class JwtService {
     }
 
     private Key getSignKey() {
-        byte[] keyBytes= Decoders.BASE64.decode("SjTUzouSBo3YEbTsSe+VDMJ81z2/IRWZ4VOTee25L9pTJgZzoLC0TzgmRuqqf+Fc4kFO9iLd/9lSC6R29wPOVTR5HgxU6JOSbADeNLDHjXOxMKdPEGUHgEQ6MF2K+0sXr47NnF/2+VOMHX2POy4OpAHIly/8NHLGA0XwEpQqjFEBVfiIcdqXNK4dy4fO2qMrIA1tl5Qy/QFZN+oAidWiJLbpDgxsXTSrVyhnGQqX4J7rxYfro89cO7edmtNX4ArsF5O+2UWvJm0H6q3WkXzmFzAkiI5L5CpRYzxZmZ/OMmOoyqT2IrRG4C29YJorEaMZrcsDtSDq3eQNiNfd2y3bdL7L9snigZYu5TqPRpG8mKc=");
+        byte[] keyBytes= Decoders.BASE64.decode("SjTUzouSBo3YEbTsSe+VDMJ81z2/IRWZ4VOTee25L9pTJgZzoLC0TzgmRuqqf+Fc4kFO9iLd/9lSC6R29wPOVTR5HgxU6JOSbADeNLDHjXOxMKdPEGUHgEQ6MF2K+0sXr47NnF/2/OMmOoyqT2IrRG4C29YJorEaMZrcsDtSDq3eQNiNfd2y3bd");
         return Keys.hmacShaKeyFor(keyBytes);
     }
 }
+
+//+VOMHX2POy4OpAHIly/8NHLGA0XwEpQqjFEBVfiIcdqXNK4dy4fO2qMrIA1tl5Qy/QFZN+oAidWiJLbpDgxsXTSrVyhnGQqX4J7rxYfro89cO7edmtNX4ArsF5O+2UWvJm0H6q3WkXzmFzAkiI5L5CpRYzxZmZL7L9snigZYu5TqPRpG8mKc=

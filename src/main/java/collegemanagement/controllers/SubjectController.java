@@ -6,6 +6,7 @@ import collegemanagement.service.SubjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +24,7 @@ public class SubjectController {
     }
 
     @PutMapping("/updateSemfee")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ApiResponse<SubjectDto>> updateName(@RequestParam int id, @RequestParam String name){
         return new ResponseEntity<>(new ApiResponse<>(subjectService.update(id,name)),HttpStatus.OK);
     }

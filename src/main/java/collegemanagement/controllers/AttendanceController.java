@@ -24,7 +24,7 @@ public class AttendanceController {
 
     @GetMapping("/all")
 
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ApiResponse<List<AttendanceDto>>> getAttendance(){
          return new ResponseEntity<>(new ApiResponse<>(attendanceService.getAllAttendance()),HttpStatus.OK);
     }
@@ -35,7 +35,7 @@ public class AttendanceController {
         return new ResponseEntity<>(new ApiResponse<>(attendanceService.addAttendance(attendance)), HttpStatus.OK);
     }
     @PutMapping("/attendedClasses")
-    @PreAuthorize("hasAuthority('ROLE_FACULTY')")
+    @PreAuthorize("hasRole('ROLE_FACULTY')")
     public ResponseEntity<ApiResponse<AttendanceDto>> update(@RequestParam int id, @RequestParam int attendedClasses){
         return new ResponseEntity<>(new ApiResponse<>(attendanceService.update(id,attendedClasses)),HttpStatus.NO_CONTENT);
     }
@@ -43,6 +43,7 @@ public class AttendanceController {
 
 
     @DeleteMapping("/delete")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public  ResponseEntity<ApiResponse<String>> deleteAttendance(@RequestParam int id){
         if(attendanceService.delete(id))
             return  new ResponseEntity<>(new ApiResponse<>("Deleted successfully"),HttpStatus.OK);
@@ -58,10 +59,12 @@ public class AttendanceController {
     }
 
     @GetMapping("/SemesterWise")
-    //@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_FACULTY')")
     public ResponseEntity<ApiResponse<Double>> semAttendance(@RequestParam int studentId,@RequestParam int semesterId){
             return new ResponseEntity<>(new ApiResponse<>(attendanceService.calculateSemesterAttendancePercentage(studentId,semesterId)), HttpStatus.OK);
 
     }
+
+
 
 }

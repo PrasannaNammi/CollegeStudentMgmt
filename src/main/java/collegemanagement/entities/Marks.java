@@ -10,7 +10,7 @@ public class Marks {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private int  marksId;
+    private int markId;
 
     @ManyToOne
     @JsonIgnore
@@ -34,12 +34,12 @@ public class Marks {
     private int subjectId;
     private  double marksObtained;
 
-    public int getMarksId() {
-        return marksId;
+    public int getMarkId() {
+        return markId;
     }
 
-    public void setMarksId(int marksId) {
-        this.marksId = marksId;
+    public void setMarkId(int markId) {
+        this.markId = markId;
     }
 
     public Student getStudent() {
@@ -83,7 +83,7 @@ public class Marks {
     }
 
     public Marks(int marksId, String examType, int studentId, int semesterId, int subjectId, double marksObtained) {
-        this.marksId = marksId;
+        this.markId = marksId;
         this.examType = examType;
         this.studentId = studentId;
         this.semesterId = semesterId;

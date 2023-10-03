@@ -6,6 +6,7 @@ import collegemanagement.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,6 +25,7 @@ public class StudentController {
     }
 
     @GetMapping("/id")
+    @PreAuthorize("hasRole('ROLE_STUDENT')")
     public ResponseEntity<ApiResponse<StudentDto>> getStudentById(@RequestParam int studentId){
         return new ResponseEntity<>(new ApiResponse<>(studentService.findStudentbyId(studentId)), HttpStatus.OK);
     }
@@ -34,11 +36,13 @@ public class StudentController {
     }
 
     @PostMapping("/newStudent")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ApiResponse<StudentDto>> createStudent(@RequestBody StudentDto studentDto){
         return new ResponseEntity<>(new ApiResponse<>(studentService.addStudent(studentDto)),HttpStatus.OK);
     }
 
     @DeleteMapping("/delete")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ApiResponse<String>> deleteStudent(@RequestParam int id){
         if(studentService.delete(id))
             return  new ResponseEntity<>(new ApiResponse<>("Deleted successfully"),HttpStatus.OK);
